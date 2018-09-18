@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^about/([a-zA-Z0-9-/]+)$ about/?slug=$1   [L]
+RewriteRule ^contact/([a-zA-Z0-9-/]+)$ contact/?slug=$1   [L]
+RewriteRule ^project/([a-zA-Z0-9-/]+)$ project/?slug=$1   [L]
+RewriteRule ^news/([a-zA-Z0-9-/]+)$ news/?slug=$1   [L]
